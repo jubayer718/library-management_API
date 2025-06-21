@@ -27,11 +27,14 @@ app.use(express_1.default.json());
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const res = yield mongoose_1.default.connect(process.env.MONGO_URI);
-            console.log(res);
+            yield mongoose_1.default.connect(process.env.MONGO_URI);
+            console.log('MongoDB connected');
+            app.listen(port, () => {
+                console.log(`Server running on port ${port}`);
+            });
         }
         catch (error) {
-            console.log(error);
+            console.error(' Error connecting to MongoDB:', error);
         }
     });
 }
