@@ -18,5 +18,9 @@ const bookSchema = new Schema({
   timestamps:true
 })
 
+bookSchema.methods.updateAvailability = function () {
+  this.available=this.copies>0
+}
+
 export const Book = model(`Book`, bookSchema);
 
