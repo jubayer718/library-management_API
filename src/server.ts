@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import { connectDB } from './config/db';
 
 dotenv.config();
 
@@ -18,14 +18,12 @@ app.use(express.json());
 
 async function main() {
   try {
-    await mongoose.connect(process.env.MONGO_URI as string)
-    console.log('MongoDB connected');
+    
+    await connectDB();
     
     app.listen(port, () => {
       console.log(`Server running on port ${port}`)
     })
-
-
 
   } catch (error) {
     console.error(' Error connecting to MongoDB:', error);
@@ -33,15 +31,3 @@ async function main() {
   }
 }
 main()
-
-
-
-
-// mongoose.connect(process.env.MONGO_URI as string)
-//   .then(() => {
-//     console.log('MongoDB connected');
-//     app.listen(port, () => {
-//       console.log(`Server running on port ${port}`);
-//     });
-//   })
-//   .catch(err => console.error('DB Connection Error:', err));
