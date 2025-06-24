@@ -12,19 +12,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const app_1 = __importDefault(require("./app"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const configuration_1 = __importDefault(require("./app/configuration"));
-const app_1 = __importDefault(require("./app"));
-const main = () => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        yield mongoose_1.default.connect(configuration_1.default.db_Uri);
-        console.log("Mongo db connected with mongoose!!");
-        app_1.default.listen(configuration_1.default.port, () => {
-            console.log(`Server running on port ${configuration_1.default.port}`);
-        });
-    }
-    catch (error) {
-        console.log("Error from mongodb", error);
-    }
-});
+function main() {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            yield mongoose_1.default.connect(configuration_1.default.db_Uri);
+            app_1.default.listen(configuration_1.default.port, () => {
+                console.log(`server running on port ${configuration_1.default.port}`);
+            });
+        }
+        catch (error) {
+            console.log(error);
+        }
+    });
+}
 main();

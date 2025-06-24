@@ -11,19 +11,17 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ! application api
-app.use("/api", BookRouters);
-app.use("/api", BorrowRouters);
 
-// ! general routes
 app.get("/", (req: Request, res: Response) => {
   res.send("Library management API");
 });
 
-// ! API not found
+app.use("/api", BookRouters);
+app.use("/api", BorrowRouters);
+
+
 app.use(notFound);
 
-// ! global error handler
 app.use(globalErrorHandler);
 
 export default app;
