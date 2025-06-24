@@ -1,5 +1,5 @@
-import { Books } from "../../../model/booksModel/books.model";
-import { Borrow, TBorrow } from "../../../model/brrowModel/brrow.model";
+import { Books } from "../model/booksModel/books.model";
+import { Borrow, TBorrow } from "../model/brrowModel/brrow.model";
 
 
 const createBorrowIntoDB = async (payload: TBorrow) => {

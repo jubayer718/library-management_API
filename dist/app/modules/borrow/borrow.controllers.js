@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BorrowControllers = void 0;
-const brrow_service_1 = require("../books/services/brrow.service");
+const brrow_service_1 = require("../../services/brrow.service");
 const createBorrow = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const borrowData = req.body;
     const result = yield brrow_service_1.BorrowServices.createBorrowIntoDB(borrowData);

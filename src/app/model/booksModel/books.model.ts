@@ -1,5 +1,5 @@
 import { model, Schema } from "mongoose";
-import { TBook } from "../../modules/books/services/books.service";
+import { TBook } from "../../services/books.service";
 
 
 const bookSchema = new Schema<TBook>(

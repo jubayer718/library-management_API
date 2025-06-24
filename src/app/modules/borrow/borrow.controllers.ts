@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { BorrowServices } from "../books/services/brrow.service";
+import { BorrowServices } from "../../services/brrow.service";
 
 
 const createBorrow = async (req: Request, res: Response) => {

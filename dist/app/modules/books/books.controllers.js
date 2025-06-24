@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BookControllers = void 0;
 const books_validation_1 = require("./books.validation");
-const books_service_1 = require("./services/books.service");
+const books_service_1 = require("../../services/books.service");
 // ! create book into db
 const createBook = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {

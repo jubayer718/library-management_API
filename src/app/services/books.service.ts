@@ -1,4 +1,4 @@
-import { Books } from "../../../model/booksModel/books.model";
+import { Books } from "../model/booksModel/books.model";
 
 
 

@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { validatedBooks, validatedPartialBooks } from "./books.validation";
-import { BookServices } from "./services/books.service";
+import { BookServices } from "../../services/books.service";
 
 
 interface QueryOptions {
