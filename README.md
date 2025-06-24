@@ -76,7 +76,7 @@ npm install
 npm start
 ```
 
-The server will run by default on `http://localhost:3000/` or the port defined in `.env`.
+The server will run by default on `http://localhost:8000/` or the port defined in `.env`.
 
 ## 📦 Dependencies
 
@@ -93,7 +93,7 @@ Create a `.env` file in the root directory:
 ```env
 Example
 
-PORT=3000
+PORT=8000
 DATABASE_URL=mongodb://localhost:27017/library
 ```
 
